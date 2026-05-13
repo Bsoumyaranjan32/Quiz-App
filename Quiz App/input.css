@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* --- Base Setup --- */
+/* Reset default margins and paddings for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+/* --- Global Layout --- */
+/* Center the main container vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(228, 228, 228);
+}
+
+/* --- Main Container --- */
+/* The white card holding the quiz content */
+.container {
+    width: 670px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.1);
+}
+
+/* --- Header Section --- */
+/* Top area with Title and Timer aligned side-by-side */
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* --- Timer Styling --- */
+/* Base circle for the countdown visual */
+.container .circular-timer {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#d90429 360deg, #e4e4e4 0deg);
+}
+
+/* Inner white circle to create the "donut" or ring effect */
+.container .circular-timer::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Text displaying the seconds left inside the timer */
+.container #timer-text {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d90429;
+}
+
+/* --- Quiz Area --- */
+.simple-quiz {
+    padding: 15px 0;
+}
+
+.simple-quiz h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --- Answer Buttons Styling --- */
+/* Default look for the options */
+.btn {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    background: white;
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Hover effect for active buttons */
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+/* .answer-buttons i {
+    float: right;
+} */
+
+/* .btn:hover {
+    background: black;
+    color: white;
+} */
+
+/* #correct:hover {
+    border-color: #B7E1C1;
+    background: #D4EDDA;
+    color: #155724;
+}
+
+.answer-button:hover {
+    border-color: #F4BEC3;
+    background: #F8D7DA;
+    color: #721C24;
+} */
+
+/* --- Next/Submit Button Styling --- */
+.next-btn {
+    display: block;
+    margin: 20px auto 0;
+    width: 150px;
+    background: #5a189a;
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.next-btn i {
+    margin-left: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.next-btn:hover i {
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
+/* --- Answer Validation States --- */
+/* Green style for the right answer */
+.correct {
+    background: #9aeabc;
+    color: #222;
+}
+
+/* Red style for the wrong answer */
+.incorrect {
+    background: #ff9393;
+    color: #222;
+}
+
+/* Jab answer select ho jaye toh baaki buttons click na ho sakein */
+/* Disables interaction for answered questions */
+.btn:disabled {
+    cursor: no-drop;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Setting up the document character set and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Adding Favicon for the browser tab -->
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <!-- Linking external CSS file for styling -->
+    <link rel="stylesheet" href="input.css">
+    <!-- FontAwesome link for Icons (if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Main Quiz Container that holds everything -->
+    <div class="container">
+        <!-- Header Section containing App Title and Timer -->
+        <div class="header">
+            <h1>Simple Quiz</h1>
+            <!-- Circular Timer Display -->
+            <div id="timer" class="circular-timer">
+                <span id="timer-text">15s</span>
+            </div>
+        </div>
+        
+        <!-- Quiz Content Section: Question and Answer options -->
+        <div class="simple-quiz">
+            <!-- Question Text Heading -->
+            <h2 class="question">Question goes here</h2>
+            <!-- Container for dynamic answer buttons -->
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <!-- Next Question or Play Again Button -->
+            <button class="next-btn">Next <i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Linking the external JavaScript file for quiz logic -->
+    <script src="main.js"></script>
+</body>
+
+</html>
